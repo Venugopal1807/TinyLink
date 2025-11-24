@@ -2,7 +2,7 @@
 
 A full-stack URL shortening service built with Next.js 14 (App Router), Tailwind CSS, and Postgres (Neon) via Prisma ORM. Designed for performance, type safety, and a clean user experience.
 
-### 🔗 Live Demo: [Insert your Vercel URL here after deployment]
+🔗 Live Demo: [Insert your Vercel URL here after deployment]
 🎥 Video Walkthrough: [Insert your Loom/Video Link here]
 
 ## 🚀 Core Features
@@ -69,7 +69,7 @@ Issue: My initial handler updated the local state but didn't strictly await the 
 
 Outcome: I implemented a robust pattern where the UI updates immediately (Optimistic Update), but reverts to the previous state if the server request fails, ensuring data integrity without sacrificing user experience.
 
-##m💻 Installation & Setup
+## 💻 Installation & Setup
 
 Clone the repo
 
