@@ -2,8 +2,8 @@
 
 A full-stack URL shortening service built with Next.js 14 (App Router), Tailwind CSS, and Postgres (Neon) via Prisma ORM. Designed for performance, type safety, and a clean user experience.
 
-🔗 Live Demo: [Insert your Vercel URL here after deployment]
-🎥 Video Walkthrough: [Insert your Loom/Video Link here]
+### 🔗 Live Demo: [Insert your Vercel URL here after deployment]
+### 🎥 Video Walkthrough: [Insert your Loom/Video Link here]
 
 ## 🚀 Core Features
 
