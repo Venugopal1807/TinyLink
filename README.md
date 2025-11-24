@@ -2,54 +2,54 @@
 
 A full-stack URL shortening service built with Next.js 14 (App Router), Tailwind CSS, and Postgres (Neon) via Prisma ORM. Designed for performance, type safety, and a clean user experience.
 
-## 🔗 Live Demo: [Insert your Vercel URL here after deployment]
+### 🔗 Live Demo: [Insert your Vercel URL here after deployment]
 🎥 Video Walkthrough: [Insert your Loom/Video Link here]
 
 ## 🚀 Core Features
 
-### Shorten Links: Generates 6-8 character alphanumeric codes (verified unique).
+Shorten Links: Generates 6-8 character alphanumeric codes (verified unique).
 
-### Smart Redirects: Performs server-side 302 redirects with sub-100ms latency.
+Smart Redirects: Performs server-side 302 redirects with sub-100ms latency.
 
 Analytics: Tracks total clicks, last active timestamps, and creation dates.
 
 QR Code Generation: Auto-generates QR codes for mobile sharing.
-
+#
 Optimistic UI: Dashboard updates instantly before the server confirms, providing a snappy feel.
 
 Robust API: Fully compliant REST API (GET, POST, DELETE) for automated testing.
 
 ## 🛠️ Tech Stack
 
-### Frontend: React, Next.js 14 (App Router), Tailwind CSS, Lucide Icons.
+Frontend: React, Next.js 14 (App Router), Tailwind CSS, Lucide Icons.
 
-### Backend: Next.js Route Handlers (Serverless functions).
+Backend: Next.js Route Handlers (Serverless functions).
 
-### Database: Neon (Serverless Postgres).
+Database: Neon (Serverless Postgres).
 
-## ORM: Prisma (Schema-based, type-safe database access).
+ORM: Prisma (Schema-based, type-safe database access).
 
-### Deployment: Vercel.
+Deployment: Vercel.
 
 ## 🧠 AI & Development Process
 
-I utilized LLMs (ChatGPT) as a "Pair Programmer" for approximately 30-40% of this project, specifically for architectural bootstrapping and boilerplate generation.
+I utilized LLMs (ChatGPT) as a technical consultant and architect for approximately 30-40% of this project. My goal was to simulate a senior engineering review process where I validate the decisions before implementation.
 
-## How I used AI:
+### How I used AI:
 
-Schema Design: I used AI to brainstorm the optimal Prisma schema for high-read, low-write scenarios (URL redirects).
+Architecture & Planning: I prompted the AI for a "Visual Architecture Diagram" and a structured execution timeline to ensure I could meet the tight deadline without scope creep. This helped me visualize the data flow between the Next.js client, the API layer, and the Neon database.
 
-Tailwind Patterns: I leveraged AI to generate the complex "Glassmorphism" CSS classes for the dashboard cards to save time on styling.
+API Design Strategy: I leveraged AI to define a clean API contract (e.g., standardized JSON responses for stats, correct HTTP status codes like 409 for duplicates) before writing the actual logic.
 
-Regex Logic: I verified my custom code validation regex (^[A-Za-z0-9]{6,8}$) with AI to ensure it covered all edge cases.
+Debugging Partner: When I encountered specific configuration issues—such as Vercel environment variables not persisting or chart data mismatching the expected format—I used AI to analyze the error logs and identify the root causes quickly.
 
-What I built myself:
+### What I built myself:
 
-Core Logic: The handleSubmit and handleDelete integration with the backend API.
+Full Implementation: I manually wrote the Next.js App Router code, including the page.tsx UI components and route.ts API handlers, translating the high-level plan into working TypeScript code.
 
-State Management: Handling the React useState logic for the dashboard list and loading states.
+Database Integration: I set up the Prisma schema and handled the secure database connection logic, ensuring features like the "Optimistic UI" deletion worked seamlessly with the backend state.
 
-Debugging: Fixing the critical file conflicts in the App Router structure and ensuring the force-dynamic rendering for the stats page.
+Final Polish: I refined the UI aesthetics (Glassmorphism effect), implemented the QR code generation, and ensured the application met all automated testing criteria (e.g., health checks and redirect behavior).
 
 ## 📉 Struggles & Outcomes
 
