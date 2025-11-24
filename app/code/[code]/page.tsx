@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import { ArrowLeft, BarChart2, Calendar, Globe, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { headers } from 'next/headers'; // Import headers to detect domain
 
 // Initialize Prisma
 const prisma = new PrismaClient();
@@ -35,9 +36,14 @@ export default async function StatsPage({ params }: { params: any }) {
     ? new Date(link.lastClickedAt).toLocaleString('en-US')
     : 'Never';
 
-  // Safe URL generation for QR code
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  // --- FIX: Auto-detect the real domain name ---
+  const headersList = headers();
+  const host = headersList.get('host') || 'localhost:3000';
+  const protocol = host.includes('localhost') ? 'http' : 'https';
+  const baseUrl = `${protocol}://${host}`;
+  
   const qrData = `${baseUrl}/${link.shortCode}`;
+  // ---------------------------------------------
 
   return (
     <div className="min-h-screen bg-[#09090b] text-zinc-100 font-sans p-6">
