@@ -5,7 +5,7 @@ A full-stack URL shortening service built with Next.js 14 (App Router), Tailwind
 ### 🔗 Live Demo: https://tiny-link-neon-ten.vercel.app/
 ### 🎥 Video Walkthrough: [Insert your Loom/Video Link here]
 
-## 🚀 Core Features
+## Core Features
 
 Shorten Links: Generates 6-8 character alphanumeric codes (verified unique).
 
@@ -19,7 +19,7 @@ Optimistic UI: Dashboard updates instantly before the server confirms, providing
 
 Robust API: Fully compliant REST API (GET, POST, DELETE) for automated testing.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 Frontend: React, Next.js 14 (App Router), Tailwind CSS, Lucide Icons.
 
@@ -31,7 +31,7 @@ ORM: Prisma (Schema-based, type-safe database access).
 
 Deployment: Vercel.
 
-## 🧠 AI & Development Process
+## AI & Development Process
 
 I utilized LLMs (ChatGPT) as a technical consultant and architect for approximately 30-40% of this project. My goal was to simulate a senior engineering review process where I validate the decisions before implementation.
 
@@ -51,7 +51,7 @@ Database Integration: I set up the Prisma schema and handled the secure database
 
 Final Polish: I refined the UI aesthetics (Glassmorphism effect), implemented the QR code generation, and ensured the application met all automated testing criteria (e.g., health checks and redirect behavior).
 
-## 📉 Struggles & Outcomes
+## Struggles & Outcomes
 
 ### Struggle 1: The App Router File Conflict
 
@@ -69,7 +69,7 @@ Issue: My initial handler updated the local state but didn't strictly await the 
 
 Outcome: I implemented a robust pattern where the UI updates immediately (Optimistic Update), but reverts to the previous state if the server request fails, ensuring data integrity without sacrificing user experience.
 
-## 💻 Installation & Setup
+## Installation & Setup
 
 Clone the repo
 
